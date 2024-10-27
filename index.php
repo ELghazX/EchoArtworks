@@ -18,6 +18,11 @@ $posts = ambilData($conn, "select * from posts");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<?php if (!isset($_SESSION['user'])) : ?>
+    <button><a href="login.php">Login</a></button>
+    <button><a href="register.php">register</a></button>
+<?php endif; ?>
+
 
 <body>
     <h1>HALAMAN TESTING</h1>
