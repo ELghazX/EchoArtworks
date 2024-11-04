@@ -3,7 +3,7 @@ include 'conn.php';
 include 'func.php';
 session_start();
 if (!isset($_SESSION['login'])) {
-    header('Location: login.php');
+    header('Location: logres.php');
     exit;
 }
 
