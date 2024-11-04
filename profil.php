@@ -9,6 +9,9 @@ if (!isset($_SESSION['login'])) {
 }
 
 $idUser = $_GET['idUser'];
+$sqlAkun = "SELECT * FROM users WHERE id_user = $idUser";
+$akuns = ambilData($conn, $sqlAkun);
+$akun = $akuns[0];
 $sql = "SELECT posts.*, users.username, 
     (SELECT COUNT(*) FROM likes WHERE likes.id_post = posts.id_post) as like_count,
     (SELECT COUNT(*) FROM comments WHERE comments.id_post = posts.id_post) as comment_count
@@ -45,7 +48,7 @@ $posts = ambilData($conn, $sql);
             </div>
         </div>
         <div class="username-container">
-            @<?= htmlspecialchars($posts[0]['username']) ?>
+            @<?= htmlspecialchars($akun['username']) ?>
         </div>
         <div class="postingan-kamu">
             Postingan Kamu

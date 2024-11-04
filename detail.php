@@ -33,23 +33,26 @@ $post = $posts[0];
     <header>
         <!-- Navbar -->
         <?php include 'navbar.php'; ?>
+        <button> <a href="index.php">Kembali</a></button><br>
     </header>
     <main>
-        <button> <a href="index.php">Kembali</a></button><br>
+        <!-- post konten  -->
         <img src="<?= $post['image'] ?>" alt="">
         <h1><?= $post['caption'] ?></h1>
         <p><?= $post['description'] ?></p>
         <p>Posted by: <?= $post['username'] ?></p>
+        <!-- like -->
         <form method='POST' action='toggleLike.php'>
             <input type='hidden' name='id_post' value='<?php echo $post["id_post"]; ?>'>
             <button type='submit'><?php echo $likes['is_liked'] ? "Unlike" : "Like"; ?> (<?php echo $likes['total_likes']; ?>)</button>
         </form>
-
+        <!-- donlot -->
         <a id="downloadBtn" href="<?= $post['image'] ?>" download class="download-btn">Unduh Gambar</a>
         <p>Comments: <?= $post['comment_count'] ?></p>
 
+        <!-- komenn -->
         <?php
-        $sql_comments = "SELECT comments.*, users.username FROM comments JOIN users ON comments.id_user = users.id_user WHERE comments.id_post = $idPost";
+        $sql_comments = "SELECT comments.*, users.id_user, users.username FROM comments JOIN users ON comments.id_user = users.id_user WHERE comments.id_post = $idPost";
         $comments = ambilData($conn, $sql_comments);
         ?>
         <div>
@@ -61,16 +64,14 @@ $post = $posts[0];
             </form>
             <?php foreach ($comments as $comment): ?>
                 <div class="userComment">
-                    <p><a href=""><strong><?= $comment['username'] ?>:</strong></a> <?= $comment['comment_text'] ?>
+                    <p><a href="profil.php?idUser=<?= $comment['id_user'] ?>"><strong><?= $comment['username'] ?>:</strong></a> <?= $comment['comment_text'] ?>
                 </div>
             <?php endforeach; ?>
         </div>
 
     </main>
     <footer>
-        <div class="footer">
-            <p>&copy; 2024 EchoArtworks</p>
-        </div>
+        <?php include 'footer.php'; ?>
     </footer>
 
 </body>

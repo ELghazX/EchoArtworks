@@ -24,7 +24,7 @@ if (!isset($idUser)) {
         $pageTadi = "index.php";
     }
     echo "<script>
-        alert('Silakan login dulu untuk menyukai post.');
+        alert('Silakan login dulu untuk komen');
         window.location.href='$pageTadi';
     </script>";
     exit;

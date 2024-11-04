@@ -40,7 +40,7 @@ shuffle($posts);
                 <div class="navbar">
                     <a href="addPost.php"><i class='bx bx-add-to-queue' style="font-size: 45px;"></i><span class="tooltip">Tambah Post</span></a>
                     <a href=""><i class='bx bx-help-circle'></i><span class="tooltip">Help</span></a>
-                    <a href="">FAQ</a>
+                    <a href="faq.php">FAQ</a>
                     <?php if (isset($_SESSION["idUser"])): ?>
                         <a href="profil.php?idUser=<?= $idUser ?>"><i class='bx bxs-user-circle' style="font-size: 50px;"></i><span class="tooltip">Profil kamu</span></a>
                     <?php endif; ?>
@@ -88,11 +88,7 @@ shuffle($posts);
 
 
     <footer>
-        <div class="footer">
-            @2024 EchoArtworks
-        </div>
-        <!-- tambahin lagi sini about us dll -->
-
+        <?php include 'footer.php'; ?>
     </footer>
     <script src="script/script.js"></script>
 </body>

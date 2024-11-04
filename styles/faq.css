@@ -1,0 +1,59 @@
+/* 
+Warna
+ 
+FEF9ED
+BD8282
+BEABD8
+8AAEDA
+7387BD */
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(45deg, #8AAEDA, #eecbe3, #BEABD8);
+    background-size: 300% 300%;
+    animation: backgroundGradient 10s ease infinite;
+}
+
+@keyframes backgroundGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.faq-container {
+    max-width: 600px;
+    width: 90%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #7387BD;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.faq-question {
+    font-size: 1.1rem;
+    color: #BEABD8;
+    cursor: pointer;
+    margin: 0;
+}
+
+.faq-answer {
+    display: none;
+    font-size: 1rem;
+    padding-top: 5px;
+    color: #8AAEDA;
+}
