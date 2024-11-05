@@ -13,11 +13,16 @@ if (isset($_POST['submit'])) {
 
     $idUser = $_SESSION['idUser'];
     $targetDir = "uploads/";
-    $targetFile = $targetDir . basename($_FILES["image"]["name"]);
-    $image_file_type = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
-    $uploadAble = true;
+    if (isset($_FILES["image"]) && $_FILES["image"]["error"] == 0) {
+        $targetFile = $targetDir . basename($_FILES["image"]["name"]);
+        $image_file_type = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
+        $uploadAble = true;
 
-    $uploadAble = cekImage($uploadAble, $image_file_type);
+        $uploadAble = cekImage($uploadAble, $image_file_type);
+    } else {
+        $uploadAble = false;
+        echo "No file uploaded or there was an upload error.";
+    }
 
     $newFileName = uniqid() . "." . $image_file_type;
     $targetFile = $targetDir . $newFileName;
@@ -36,15 +41,51 @@ if (isset($_POST['submit'])) {
     }
 }
 ?>
-<form method="POST" action="addPost.php" enctype="multipart/form-data">
-    <label for="caption">Judul:</label>
-    <input type="text" name="caption" id="caption" required>
 
-    <label for="description">Deskripsi:</label>
-    <textarea name="description" id="description" required></textarea>
+<!DOCTYPE html>
+<html lang="en">
 
-    <label for="image">Upload Gambar:</label>
-    <input type="file" name="image" id="image" required>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/tambahpost.css">
+    <title>Postingan Baru</title>
+</head>
 
-    <button type="submit" name="submit">Posting Gambar</button>
-</form>
+<body>
+    <div class="main-container">
+        <div class="header">
+            <p style="font-size: 32px;">Tambah Postingan</p>
+        </div>
+        <form action="" method="post" enctype="multipart/form-data">
+            <div class="container-upload">
+                <div class="container-foto">
+                    <label for="input-file" id="drop-area">
+                        <input type="file" name="image" accept="uploads/*" id="input-file" hidden>
+                        <div id="img-view">
+                            <img id="upload-image" src="assets/upload.png" alt="" style="width: 20%;">
+                            <p id="upload-text">Drag dan Drop file kamu atau klik disini untuk upload image</p>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="container-form">
+                    <label for="caption">Judul</label>
+                    <input type="text" id="caption" name="caption" maxlength="25" placeholder="Judul (Maks 25 karakter)">
+                    <label for="deskripsi">Deskripsi</label>
+                    <textarea id="deskripsi" name="description" maxlength="200" placeholder="Deskripsi (Maks 200 karakter)"></textarea>
+                    <div class="submit-btn">
+                        <input type="submit" id="submit" value="Submit" name="submit">
+                    </div>
+                </div>
+            </div>
+        </form>
+
+
+
+    </div>
+    </div>
+    <script src="script/tambahpost.js"></script>
+</body>
+
+</html>

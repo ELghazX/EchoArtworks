@@ -1,0 +1,81 @@
+body {
+    font-family: 'poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fef9ed;
+}
+
+header {
+    background: #bd8282;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+.video-tutorial {
+    margin-bottom: 20px;
+}
+
+.video-tutorial iframe {
+    width: 100%;
+    height: 315px; 
+}
+
+.faq {
+    margin-bottom: 20px;
+}
+
+.accordion .item {
+    margin: 10px 0;
+}
+
+.accordion button {
+    width: 100%;
+    padding: 10px;
+    background: #beabd8;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.accordion .content {
+    display: none;
+    padding: 10px;
+    background: #fef9ed;
+}
+
+.contact-form {
+    margin-top: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #bd8282;
+}
+
+.contact-form button {
+    padding: 10px;
+    background: #8aaeda;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background: #7387bd;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #bd8282;
+    color: white;
+}

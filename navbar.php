@@ -6,14 +6,12 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
-
-
 <!-- Navbar -->
 
 <body>
     <div class="main-container">
         <div class="header">
-            <a href="index.php" class="logo">ECHOARTWORK</a>
+            <a href="index.php" class="logo"><img src="assets/logo.png"></a>
             <div class="search-bar">
                 <input type="text" name="search" id="search" placeholder="Cari artwork disini" class="search-artwork">
                 <button type="submit" class="search-button">
@@ -34,7 +32,9 @@
         </div>
         <!-- Hidden Navbar -->
         <div class="hidden-navbar" id="hiddenNavbar">
-            <a href="profil.html"><i class='bx bxs-user-circle' style="font-size: 100px; "></i></a>
+            <?php if (isset($_SESSION["idUser"])): ?>
+                <a href="profil.html"><i class='bx bxs-user-circle' style="font-size: 100px; "></i></a>
+            <?php endif; ?>
             <input type="text" name="search" id="search" placeholder="Cari artwork disini" class="search-artwork" style="margin-top: 40px;">
             <button type="submit" style="background: none; border: none; ">
             </button>
@@ -44,7 +44,6 @@
             <a href="javascript:void(0);" class="close" onclick="toggleNavbar()"><i class='bx bx-x' style="font-size: 32px;"></i></a>
         </div>
     </div>
-
 
     <script src="script/script.js"></script>
 </body>

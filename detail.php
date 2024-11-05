@@ -1,8 +1,14 @@
 <?php
 include 'conn.php';
 include 'func.php';
-$idPost = $_GET['id_post'];
-$sql = "SELECT posts.*, users.username, 
+
+if (isset($_GET['id_post'])) {
+    $idPost = $_GET['id_post'];
+} else {
+    header('Location: index.php');
+}
+
+$sql = "SELECT posts.*, users.username, users.id_user,
     (SELECT COUNT(*) FROM likes WHERE likes.id_post = posts.id_post) as like_count,
     (SELECT COUNT(*) FROM comments WHERE comments.id_post = posts.id_post) as comment_count
     FROM posts
@@ -40,7 +46,7 @@ $post = $posts[0];
         <img src="<?= $post['image'] ?>" alt="">
         <h1><?= $post['caption'] ?></h1>
         <p><?= $post['description'] ?></p>
-        <p>Posted by: <?= $post['username'] ?></p>
+        <p>Posted by: <a href="profil.php?idUser=<?= $post['id_user'] ?>"><?= $post['username'] ?></a></p>
         <!-- like -->
         <form method='POST' action='toggleLike.php'>
             <input type='hidden' name='id_post' value='<?php echo $post["id_post"]; ?>'>
