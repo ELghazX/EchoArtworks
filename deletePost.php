@@ -2,7 +2,9 @@
 include 'func.php';
 include 'conn.php';
 session_start();
-$idPost = $_GET['id_post'];
+if (isset($_GET['id_post'])) {
+    $idPost = $_GET['id_post'];
+}
 if (isset($_SESSION['idUser'])) {
     $idUser = $_SESSION['idUser'];
 }
@@ -19,19 +21,22 @@ if (!isset($idUser)) {
     exit;
 }
 if (isset($idPost)) {
-    $query = "DELETE FROM posts WHERE id_post = ?";
-    $stmt = $conn->prepare($query);
-    $stmt->bind_param("i", $idPost);
-    if ($stmt->execute()) {
+    $query = "DELETE FROM posts WHERE id_post = $idPost AND id_user = $idUser";
+    if ($conn->query($query) === TRUE) {
         echo "<script>
             alert('Postingan berhasil dihapus.');
             window.location.href='index.php';
-            </script>";
+        </script>";
     } else {
-        echo "Error deleting post: " . $stmt->error;
+        echo "<script>
+            alert('Error: " . $query . "<br>" . $conn->error . "');
+            window.location.href='index.php';
+        </script>";
     }
-    $stmt->close();
 } else {
-    echo "No post ID provided.";
+    echo "<script>
+        alert('Postingan tidak ditemukan.');
+        window.location.href='index.php';
+        </script>";
 }
 $conn->close();
