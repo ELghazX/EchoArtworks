@@ -3,10 +3,7 @@ include 'conn.php';
 include 'func.php';
 session_start();
 
-if (!isset($_SESSION['login'])) {
-    header('Location: logres.php');
-    exit;
-}
+
 
 $idUser = $_GET['idUser'];
 $sqlAkun = "SELECT * FROM users WHERE id_user = $idUser";
@@ -51,7 +48,7 @@ $posts = ambilData($conn, $sql);
             @<?= htmlspecialchars($akun['username']) ?>
         </div>
         <div class="postingan-kamu">
-            Postingan Kamu
+            Postingan
         </div>
 
         <?php if (empty($posts)) : ?>

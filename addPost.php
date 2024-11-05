@@ -2,8 +2,19 @@
 include 'conn.php';
 include 'func.php';
 session_start();
-if (!isset($_SESSION['login'])) {
-    header('Location: logres.php');
+if (isset($_SESSION['idUser'])) {
+    $idUser = $_SESSION['idUser'];
+}
+if (!isset($idUser)) {
+    if (isset($_SERVER['HTTP_REFERER'])) {
+        $pageTadi =  $_SERVER['HTTP_REFERER'];
+    } else {
+        $pageTadi = "index.php";
+    }
+    echo "<script>
+        alert('Silakan login dulu bisa posting.');
+        window.location.href='$pageTadi';
+    </script>";
     exit;
 }
 
