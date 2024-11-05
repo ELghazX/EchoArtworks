@@ -6,12 +6,14 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
-<body>
 
-    <!-- Navbar -->
+
+<!-- Navbar -->
+
+<body>
     <div class="main-container">
         <div class="header">
-            <a href="" class="logo">ECHOARTWORK</a>
+            <a href="index.php" class="logo">ECHOARTWORK</a>
             <div class="search-bar">
                 <input type="text" name="search" id="search" placeholder="Cari artwork disini" class="search-artwork">
                 <button type="submit" class="search-button">
@@ -41,7 +43,8 @@
             <a href="">FAQ</a>
             <a href="javascript:void(0);" class="close" onclick="toggleNavbar()"><i class='bx bx-x' style="font-size: 32px;"></i></a>
         </div>
+    </div>
 
 
-        <script src="script/script.js"></script>
+    <script src="script/script.js"></script>
 </body>

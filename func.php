@@ -103,3 +103,13 @@ function formatTimeElapsed($seconds)
 
     return 'just now';
 }
+function cari($conn, $keyword)
+{
+    $query = "SELECT * from akun WHERE
+    Username LIKE '%$keyword%' OR 
+    Nama LIKE '%$keyword%' OR 
+    UID LIKE '%$keyword%' OR 
+    jenis_joki LIKE '%$keyword%'
+    ";
+    return ambilData($conn, $query);
+}
