@@ -1,0 +1,179 @@
+/* 
+Warna
+ 
+FEF9ED  = beige
+BD8282 = Coklat
+BEABD8 = Warna ungu terlalu muda
+8AAEDA = biru agak ungu
+7387BD = biru agak ungu tapi lebih tua */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background-color: #FEF9ED;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.btn a{
+    text-decoration: none;
+    display: flex;
+    background-color: #edadad;
+    width: fit-content;
+    padding: 8px;
+    border-radius: 20px;
+    margin-top: 20px;
+    color: #ffff;
+    margin-left: 10px;
+}
+
+
+button:hover{
+    transform: scale(0.95s);
+    transition: 0.4s;
+}
+.main-container{
+    display: flex;
+    flex-direction: column;
+    position: inherit;
+    
+}
+
+.container-detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 75%;
+    margin: auto;
+    border: #edadad solid;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+.keterangan{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    gap: 5px;
+}
+
+.container-post{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    gap: 10px;
+}
+
+.container-post img{
+    margin-top: 20px;
+    border-radius: 20px;
+    width: 75%;
+}
+
+.container-komentar{
+    display: flex;
+    width: 100%;
+    margin-left: 20px;
+    flex-direction: column;
+}
+
+.container-komentar button{
+    background-color: #edadad;
+    padding: 20px;
+}
+
+.container-komentar button:hover{
+    transform: scale(0.95);
+    transition: 0.4s;
+}
+.like-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+.like-button:hover{
+    transform: scale(0.95);
+    transition: 0.4s;
+}
+.like-icon {
+    color: #555; 
+}
+
+.liked-icon {
+    color: #e63946; 
+}
+
+.like-count {
+    margin-left: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+textarea{
+    resize: none;
+    width: 50%;
+    border-radius: 20px;
+    padding: 20px;
+}
+.userComment{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffff;
+    border: 1px black solid;
+    padding: 10px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.container-komentar form {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-komentar button {
+    padding: 6px;
+    cursor: pointer;
+    width: 10%;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.kolom-komentar{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffff;
+    width: 75%;
+    padding: 20px;
+}
+
+.download-btn{
+    display: flex;
+    background-color: #edadad;
+    width: max-content;
+    border-radius: 20px;
+    padding: 6px;
+
+}
+
+.download-btn:hover{
+    transform: scale(0.95);
+    transition: 0.5s;
+
+}

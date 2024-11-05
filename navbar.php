@@ -11,13 +11,15 @@
 <body>
     <div class="main-container">
         <div class="header">
-            <a href="index.php" class="logo"><img src="assets/logo.png"></a>
-            <div class="search-bar">
-                <input type="text" name="search" id="search" placeholder="Cari artwork disini" class="search-artwork">
-                <button type="submit" class="search-button">
-                    <i class='bx bx-search-alt' style="font-size: 32px; color: #fff;"></i>
-                </button>
-            </div>
+            <a href="index.php" class="logo"><img src="assets/logo.png" style="height:100px"></a>
+            <?php if (basename($_SERVER['PHP_SELF']) == 'index.php'): ?>
+                <div class="search-bar">
+                    <input type="text" name="search" id="search" placeholder="Cari artwork disini" class="search-artwork">
+                    <button type="submit" class="search-button">
+                        <i class='bx bx-search-alt' style="font-size: 32px; color: #fff;"></i>
+                    </button>
+                </div>
+            <?php endif; ?>
             <div class="navbar">
                 <a href="addPost.php"><i class='bx bx-add-to-queue' style="font-size: 45px;"></i><span class="tooltip">Tambah Post</span></a>
                 <a href="help.php"><i class='bx bx-help-circle'></i><span class="tooltip">Help</span></a>
@@ -35,10 +37,11 @@
             <?php if (isset($_SESSION["idUser"])): ?>
                 <a href="profil.html"><i class='bx bxs-user-circle' style="font-size: 100px; "></i></a>
             <?php endif; ?>
-            <input type="text" name="search" id="search" placeholder="Cari artwork disini" class="search-artwork" style="margin-top: 40px;">
-            <button type="submit" style="background: none; border: none; ">
-            </button>
-            <a href="addPost.php"><i class='bx bx-add-to-queue' style="font-size: 45px; "></i></a>
+            <?php if (basename($_SERVER['PHP_SELF']) == 'index.php'): ?>
+                <input type="text" name="search" id="search" placeholder="Cari artwork disini" class="search-artwork" style="margin-top: 40px;">
+                <button type="submit" style="background: none; border: none; "></button>
+            <?php endif; ?>
+            <a href="addPost.php"><i class='bx bx-add-to-queue' style="font-size: 46px; "></i></a>
             <a href="help.php">Help</a>
             <a href="faq.php">FAQ</a>
             <a href="javascript:void(0);" class="close" onclick="toggleNavbar()"><i class='bx bx-x' style="font-size: 32px;"></i></a>

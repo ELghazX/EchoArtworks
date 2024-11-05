@@ -36,7 +36,7 @@ $posts = ambilData($conn, $sql);
     <div class="main-container">
         <div class="background-container">
             <a href="index.php" style="text-decoration: none; color: black;">Kembali</a>
-            <p style="font-size: 32px; font-weight: 800;">Profil Kamu</p>
+            <p style="font-size: 32px; font-weight: 800;">Profil</p>
             <a href="logout.php" style="text-decoration: none; color: black;">Logout</a>
         </div>
         <div class="profil-container">
@@ -56,7 +56,7 @@ $posts = ambilData($conn, $sql);
             <!-- ini distyling tampil di tengah align nya -->
         <?php else : ?>
             <div class="postingan">
-                <?php foreach ($posts as $post) : ?>
+                <?php foreach (array_reverse($posts) as $post) : ?>
                     <div>
                         <a href="detail.php?id_post=<?= $post['id_post'] ?>"><img src="<?= $post['image'] ?>" alt=""></a>
                     </div>

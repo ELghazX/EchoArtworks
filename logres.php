@@ -1,5 +1,12 @@
+<?php
+if (isset($_SESSION['login'])) {
+    header('Location: index.php');
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,80 +16,90 @@
     <!-- STYLE -->
     <link rel="stylesheet" href="styles/masuk.css">
 </head>
-<body>
-    <!-- Form Container -->
-    <div class="form-container">
-        <div class="col-1">
-            <p class = "featured-words">Masuk atau Daftar sekarang untuk mulai terinspirasi!</p>
-        </div> 
 
-        <div class="col col-2">
-            <div class="btn-box">
-                <button class="btn btn-1" id="login" >Login</button>
-                <button class="btn btn-2" id="register" >Daftar</button>
+<body>
+    <header>
+        <?php include 'navbar.php'; ?>
+    </header>
+    <main>
+
+        <!-- Form Container -->
+        <div class="form-container">
+            <div class="col-1">
+                <p class="featured-words">Masuk atau Daftar sekarang untuk mulai terinspirasi!</p>
             </div>
 
-            <!-- Login Form Container -->
-            <form action="login.php" method="POST">
-                <div class="login-form">
-                    <div class="form-title">
-                        <span>Login</span>
-                    </div>
-                    <div class="form-inputs">
-                        <div class="input-box">
-                            <input type="email" class="input-field" name="email" id="email" placeholder="Email" required>
-                            <i class="bx bx-envelope icon"></i>
-                        </div>
-                        <div class="input-box"> 
-                            <input type="password" class="input-field" name="password" id="password" placeholder="Password" required>
-                            <i class="bx bx-lock-alt icon"></i>
-                        </div>
-                        <div class="input-box">
-                            <button class="input-submit" name="submit" id="login">
-                                <span>Login</span>
-                                <i class="bx bx-right-arror-alt"></i>
-                            </button>
-                        </div>
-                    </div>
+            <div class="col col-2">
+                <div class="btn-box">
+                    <button class="btn btn-1" id="login">Login</button>
+                    <button class="btn btn-2" id="register">Daftar</button>
                 </div>
-            </form>
 
-            <!-- Register Form Container -->
-            <form action="register.php" method="POST">
-                <div class="register-form">
-                    <div class="form-title">
-                        <span>Buat Akun</span>
-                    </div>
-                    <div class="form-inputs">
-                        <div class="input-box">
-                            <input type="email" class="input-field" name = "email" id="email" placeholder="Email" required>
-                            <i class="bx bx-envelope icon"></i>
+                <!-- Login Form Container -->
+                <form action="login.php" method="POST">
+                    <div class="login-form">
+                        <div class="form-title">
+                            <span>Login</span>
                         </div>
-                        <div class="input-box">
-                            <input type="text" class="input-field" name = "username" id="username"placeholder="Username" required>
-                            <i class="bx bx-user icon"></i>
-                        </div>
-                        <div class="input-box"> 
-                            <input type="password" class="input-field" name = "password" id="password" placeholder="Password" required>
-                            <i class="bx bx-lock-alt icon"></i>
-                        </div>
-                        <div class="input-box"> 
-                            <input type="password" class="input-field" name = "password2" id="cpassword" placeholder="Confirm Password" required>
-                            <i class="bx bx-lock-alt icon"></i>
-                        </div>
-                        <div class="input-box">
-                            <button class="input-submit" name="submit" id="register">
-                                <span>Daftar</span>
-                                <i class="bx bx-right-arror-alt"></i>
-                            </button>
+                        <div class="form-inputs">
+                            <div class="input-box">
+                                <input type="email" class="input-field" name="email" id="email" placeholder="Email" required>
+                                <i class="bx bx-envelope icon"></i>
+                            </div>
+                            <div class="input-box">
+                                <input type="password" class="input-field" name="password" id="password" placeholder="Password" required>
+                                <i class="bx bx-lock-alt icon"></i>
+                            </div>
+                            <div class="input-box">
+                                <button class="input-submit" name="submit" id="login">
+                                    <span>Login</span>
+                                    <i class="bx bx-right-arror-alt"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </form>
-        </div> 
-    </div>
-        
+                </form>
+
+                <!-- Register Form Container -->
+                <form action="register.php" method="POST">
+                    <div class="register-form">
+                        <div class="form-title">
+                            <span>Buat Akun</span>
+                        </div>
+                        <div class="form-inputs">
+                            <div class="input-box">
+                                <input type="email" class="input-field" name="email" id="email" placeholder="Email" required>
+                                <i class="bx bx-envelope icon"></i>
+                            </div>
+                            <div class="input-box">
+                                <input type="text" class="input-field" name="username" id="username" placeholder="Username" required>
+                                <i class="bx bx-user icon"></i>
+                            </div>
+                            <div class="input-box">
+                                <input type="password" class="input-field" name="password" id="password" placeholder="Password" required>
+                                <i class="bx bx-lock-alt icon"></i>
+                            </div>
+                            <div class="input-box">
+                                <input type="password" class="input-field" name="password2" id="cpassword" placeholder="Confirm Password" required>
+                                <i class="bx bx-lock-alt icon"></i>
+                            </div>
+                            <div class="input-box">
+                                <button class="input-submit" name="submit" id="register">
+                                    <span>Daftar</span>
+                                    <i class="bx bx-right-arror-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <?php include 'footer.php'; ?>
+    </footer>
     <!-- JS -->
     <script src="js/main.js"></script>
 </body>
+
 </html>
