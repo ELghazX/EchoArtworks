@@ -1,7 +1,7 @@
 <?php
 $username = "root";
 $password = "";
-$server = 'localhost';
+$server = 'localhost:3307';
 $db = 'echoartwork';
 
 $conn = new mysqli($server, $username, $password, $db);

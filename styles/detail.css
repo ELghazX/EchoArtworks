@@ -39,9 +39,9 @@ a{
 }
 
 
-button:hover{
-    transform: scale(0.95s);
-    transition: 0.4s;
+.btn a:hover{
+    transform: scale(0.9);
+    transition: 0.3s;
 }
 .main-container{
     display: flex;
@@ -59,6 +59,7 @@ button:hover{
     border: #edadad solid;
     border-radius: 12px;
     margin-top: 20px;
+    margin-bottom: 50px;
 }
 .keterangan{
     display: flex;
@@ -150,7 +151,7 @@ textarea{
 .container-komentar button {
     padding: 6px;
     cursor: pointer;
-    width: 10%;
+    width: max-content;
     margin-top: 20px;
     border-radius: 20px;
 }
@@ -176,4 +177,34 @@ textarea{
     transform: scale(0.95);
     transition: 0.5s;
 
+}
+
+.edit-hapus{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    gap: 8px;
+    width: 100%;
+}
+
+.edit-hapus a{
+    display: flex;
+    background-color: #edadad;
+    width: 70px;
+    border-radius: 10px;
+    padding: 6px;
+    text-align: center;
+    
+}
+
+a.edit-btn:hover{
+    transform: scale(0.92);
+    transition: 0.5s;
+    background-color: #ebd0a4;
+}
+
+a.delete-btn:hover{
+    transform: scale(0.92);
+    transition: 0.5s;
+    background-color: #d13f3f;
 }

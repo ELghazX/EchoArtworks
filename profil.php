@@ -52,7 +52,7 @@ $posts = ambilData($conn, $sql);
         </div>
 
         <?php if (empty($posts)) : ?>
-            <p>Belum ada postingan</p>
+            <p style="text-align: center; margin-top: 50px">Belum ada postingan</p>
             <!-- ini distyling tampil di tengah align nya -->
         <?php else : ?>
             <div class="postingan">

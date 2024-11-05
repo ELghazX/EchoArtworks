@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
-    <link rel="stylesheet" href="aboutus.css">
+    <link rel="stylesheet" href="styles/aboutus.css">
 </head>
 <body>
     <div class="container">
         <div class="wrapper">
             <div class="wrapper-holder">
                 <div id="wrapper-img-1">
-                  <img src="images/rosa.jpg">
+                  <img src="assets/rosa.jpg">
                   <h2>Elly :3</h2>
                   <p class="deskripsi">HALOOOOOOOOOOOOOOOOOOOOOOO
                   BELOBELOBELOBELOBELOBELO <br>
@@ -24,17 +24,17 @@
                   </p>
                 </div>
                 <div id="wrapper-img-2">
-                  <img src="images/_3 (1).jpg">
+                  <img src="assets/_3 (1).jpg">
                   <h2>jali :[</h2>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. ,<br>Harum atque quod et perferendis, esse eligendi doloremque odit architecto <br> ab hic quis ipsam sequi quaerat mollitia iusto beatae eos blanditiis non.</p>
                 </div>
                 <div id="wrapper-img-3">
-                  <img src="images/isolde.jpg">
+                  <img src="assets/isolde.jpg">
                   <h2>Wulan :D</h2>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. ,<br>Harum atque quod et perferendis, esse eligendi doloremque odit architecto <br> ab hic quis ipsam sequi quaerat mollitia iusto beatae eos blanditiis non.</p>
                 </div>
                 <div id="wrapper-img-4">
-                  <img src="images/ayang.jpg">
+                  <img src="assets/ayang.jpg">
                   <h2>ijul :)</h2>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. ,<br>Harum atque quod et perferendis, esse eligendi doloremque odit architecto <br> ab hic quis ipsam sequi quaerat mollitia iusto beatae eos blanditiis non.</p>
                 </div>

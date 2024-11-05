@@ -57,18 +57,20 @@ $post = $posts[0];
                 </div>
                 <div class="keterangan">
                     <p>
-                    <p style="font-weight:bold">
+                    <p style="align-self: cente">
                     <p>Posted by: <a href="profil.php?idUser=<?= $post['id_user'] ?>"><?= $post['username'] ?></a></p>
                     <!-- like -->
 
                     <!-- donlot -->
                     <a id="downloadBtn" href="<?= $post['image'] ?>" download class="download-btn">Unduh Gambar</a>
                     <!-- dlete dan edit -->
-                    <?php if (isset($idUser) && $idUser == $post['id_user']): ?>
-                        <a href="editPost.php?id_post=<?= $post['id_post'] ?>" class="edit-btn">Edit</a>
-                        <a href="deletePost.php?id_post=<?= $post['id_post'] ?>" class="delete-btn">Hapus</a>
-                    <?php endif; ?>
-                    <p style="font-size:32px"><i class='bx bx-comment'></i> <?= $post['comment_count'] ?></p>
+                     <div class="edit-hapus">
+                         <?php if (isset($idUser) && $idUser == $post['id_user']): ?>
+                             <a href="editPost.php?id_post=<?= $post['id_post'] ?>" class="edit-btn">Edit</a>
+                             <a href="deletePost.php?id_post=<?= $post['id_post'] ?>" class="delete-btn">Hapus</a>
+                         <?php endif; ?>
+                         <p style="font-size:32px"><i class='bx bx-comment'></i> <?= $post['comment_count'] ?></p>
+                     </div>
                 </div>
 
                 <!-- komenn -->

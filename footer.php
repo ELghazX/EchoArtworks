@@ -8,12 +8,18 @@
 </head>
 
 <body>
-    <footer>
-        <div class="footer">
-            @2024 EchoArtworks
+<div class="footer">
+        <div class="menu-footer">
+            <a href="" class="logo"><img src="assets/logo.png" alt="logo" style="height: 100px;"></a>
+            <div class="tentang-kami">
+                <a href="aboutus.php">Tentang kami</a>
+            </div>
+            
         </div>
-        <!-- tambahin lagi sini about us dll -->
-    </footer>
+        <div class="copyright">
+            <p>&copy; copyright 2024 by ECHOARTWORK</p>
+        </div>
+    </div>
 </body>
 
 </html>
