@@ -22,12 +22,14 @@ shuffle($posts);
     <title>EchoArtworks</title>
     <link rel="stylesheet" href="styles/index.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 
 <body>
     <header>
         <!-- Navbar -->
         <?php include 'navbar.php'; ?>
+
     </header>
     <main>
         <!-- Login/Tidak -->
@@ -58,6 +60,7 @@ shuffle($posts);
         <?php include 'footer.php'; ?>
     </footer>
     <script src="script/script.js"></script>
+    <script src="script/search.js"></script>
 </body>
 
 </html>
