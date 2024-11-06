@@ -8,15 +8,18 @@ if (isset($_POST['submit'])) {
     $password2 = htmlspecialchars($_POST['password2']);
 
     if (cekUsername($conn, $username)) {
-        echo "Username sudah terdaftar";
+        echo "<script>alert(Username sudah terdaftar);
+        document.location.href = 'logres.php';</script>";
     } else if (cekEmail($conn, $email)) {
-        echo "Email sudah terdaftar";
+        echo "<script>alert(Email sudah terdaftar);
+        document.location.href = 'logres.php';</script>";
     } else if (!konfPassword($password, $password2)) {
-        echo "Konfirmasi password tidak sesuai";
+        echo "<script>alert(Konfirmasi password tidak sesuai);
+        document.location.href = 'logres.php';</script>";
     } else {
         if (register($conn, $username, $email, $password)) {
             echo "<script>alert('Berhasil register');
-            document.location.href='logres.html';</script>";
+            document.location.href='logres.php';</script>";
         }
     }
 }

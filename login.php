@@ -15,6 +15,7 @@ if (isset($_POST['submit'])) {
         header('Location: index.php');
         exit;
     } else {
-        echo "Email atau password salah";
+        echo "<script>alert('Email atau password salah!');
+        document.location.href = 'index.php'</script>";
     }
 }
