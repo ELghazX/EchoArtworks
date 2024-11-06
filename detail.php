@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 if (isset($_SESSION['idUser'])) {
     $idUser = $_SESSION['idUser'];
 }
@@ -56,9 +57,13 @@ $post = $posts[0];
 
                 </div>
                 <div class="keterangan">
-                    <p>
-                    <p style="align-self: cente">
-                    <p>Diposting oleh: <strong><a href="profil.php?idUser=<?= $post['id_user'] ?>"><?= $post['username'] ?></a></strong></p>
+                    <h1> <strong><a href="profil.php?idUser=<?= $post['id_user'] ?>">@<?= $post['username'] ?></a></strong></h1>
+                    <?php
+                    $postingTime = strtotime($post['created_at']);
+                    $currentTime = time();
+                    $timeDifference = $currentTime - $postingTime;
+                    ?>
+                    <p> <strong><?= formatTimeElapsed($timeDifference) ?></strong></p>
                     <!-- like -->
 
                     <!-- donlot -->
@@ -75,10 +80,6 @@ $post = $posts[0];
 
                 <!-- komenn -->
                 <div class="container-komentar">
-                    <?php
-                    $sql_comments = "SELECT comments.*, users.id_user, users.username FROM comments JOIN users ON comments.id_user = users.id_user WHERE comments.id_post = $idPost";
-                    $comments = ambilData($conn, $sql_comments);
-                    ?>
                     <h2>Komentar</h2>
                     <form method='POST' action='addComment.php'>
                         <input type='hidden' name='id_post' value='<?php echo $post['id_post']; ?>'>
@@ -86,8 +87,12 @@ $post = $posts[0];
                         <button name="submit" type='submit' class="tambah">Komentar</button>
                         <br>
                     </form>
+                    <?php
+                    $sql_comments = "SELECT comments.*, users.id_user, users.username FROM comments JOIN users ON comments.id_user = users.id_user WHERE comments.id_post = $idPost ORDER BY comments.created_at DESC";
+                    $comments = ambilData($conn, $sql_comments);
+                    ?>
                     <div class="kolom-komentar">
-                        <?php foreach (array_reverse($comments) as $comment): ?>
+                        <?php foreach ($comments as $comment): ?>
                             <div class="userComment">
                                 <p>
                                     <a href="profil.php?idUser=<?= $comment['id_user'] ?>"><strong><?= $comment['username'] ?>:</strong></a>

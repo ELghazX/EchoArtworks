@@ -16,6 +16,6 @@ if (isset($_POST['submit'])) {
         exit;
     } else {
         echo "<script>alert('Email atau password salah!');
-        document.location.href = 'index.php'</script>";
+        document.location.href = 'logres.php'</script>";
     }
 }

@@ -85,19 +85,19 @@ function cekImage($uploadAble, $image_file_type)
 function formatTimeElapsed($seconds)
 {
     $intervals = [
-        'year' => 31536000,
-        'month' => 2592000,
-        'week' => 604800,
-        'day' => 86400,
-        'hour' => 3600,
-        'minute' => 60,
-        'second' => 1,
+        'tahun' => 31536000,
+        'bulan' => 2592000,
+        'minggu' => 604800,
+        'hari' => 86400,
+        'jam' => 3600,
+        'menit' => 60,
+        'detik' => 1,
     ];
 
     foreach ($intervals as $name => $duration) {
         $count = floor($seconds / $duration);
         if ($count >= 1) {
-            return $count . ' ' . $name . ($count > 1 ? 's' : '') . ' ago';
+            return $count . ' ' . $name . ($count > 1 ? 's' : '') . ' yang lalu';
         }
     }
 
@@ -112,4 +112,15 @@ function cari($conn, $keyword)
     jenis_joki LIKE '%$keyword%'
     ";
     return ambilData($conn, $query);
+}
+
+function isUserBanned($conn, $userId)
+{
+    $sql = "SELECT status FROM users WHERE id = $userId";
+    $status = ambilData($conn, $sql);
+    if (count($status) > 0) {
+        return $status[0]['status'] === 'banned';
+    } else {
+        return false;
+    }
 }
