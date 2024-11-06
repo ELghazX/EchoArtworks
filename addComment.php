@@ -6,7 +6,6 @@ session_start();
 if (isset($_SESSION['idUser'])) {
     $idUser = $_SESSION['idUser'];
 }
-
 if (isset($_POST['id_post'])) {
     $idPost = $_POST['id_post'];
 } else {

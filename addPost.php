@@ -72,7 +72,7 @@ if (isset($_POST['submit'])) {
             <div class="header">
                 <p style="font-size: 32px;">Tambah Postingan</p>
             </div>
-            <form action="" method="post" enctype="multipart/form-data">
+            <form action="" method="post" enctype="multipart/form-data" onsubmit="return confirm('Yakin ingin posting?');">
                 <div class="container-upload">
                     <div class="container-foto">
                         <label for="input-file" id="drop-area">
@@ -89,7 +89,7 @@ if (isset($_POST['submit'])) {
                         <label for="deskripsi">Deskripsi</label>
                         <textarea id="deskripsi" name="description" maxlength="200" placeholder="Deskripsi (Maks 200 karakter)"></textarea>
                         <div class="submit-btn">
-                            <input type="submit" id="submit" value="Submit" name="submit">
+                            <input type="submit" id="submit" value="Posting" name="submit">
                         </div>
                     </div>
                 </div>

@@ -3,10 +3,17 @@ include 'conn.php';
 include 'func.php';
 session_start();
 
-$idPost = $_GET['id_post'];
-$sql = "SELECT * FROM posts WHERE id_post = $idPost";
-$posts = ambilData($conn, $sql);
-$post = $posts[0];
+if (isset($_GET['id_post'])) {
+    $idPost = $_GET['id_post'];
+    $sql = "SELECT * FROM posts WHERE id_post = $idPost";
+    $posts = ambilData($conn, $sql);
+    $post = $posts[0];
+} else {
+    echo "<script>
+        alert('Postingan tidak ditemukan.');
+        window.location.href='index.php';
+        </script>";
+}
 
 if (isset($_SESSION['idUser'])) {
     $idUser = $_SESSION['idUser'];
@@ -80,7 +87,7 @@ if (isset($_POST['submit'])) {
             <div class="header">
                 <p style="font-size: 32px;">Edit Postingan</p>
             </div>
-            <form action="" method="post" enctype="multipart/form-data">
+            <form action="" method="post" enctype="multipart/form-data" onsubmit="return confirm('Apakah Anda yakin ingin mengubah postingan ini?');">
                 <div class="container-upload">
                     <div class="container-foto">
                         <label for="input-file" id="drop-area">
@@ -97,7 +104,7 @@ if (isset($_POST['submit'])) {
                         <label for="deskripsi">Deskripsi</label>
                         <textarea id="deskripsi" name="description" maxlength="200" placeholder="Deskripsi (Maks 200 karakter)"><?php echo $post['description']; ?></textarea>
                         <div class="submit-btn">
-                            <input type="submit" id="submit" value="Submit" name="submit">
+                            <input type="submit" id="submit" value="Ubah Postingan" name="submit">
                         </div>
                     </div>
                 </div>
