@@ -1,0 +1,174 @@
+/* 
+Warna
+ 
+FEF9ED  = beige
+BD8282 = Coklat
+BEABD8 = Warna ungu terlalu muda
+8AAEDA = biru agak ungu
+7387BD = biru agak ungu tapi lebih tua */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #FEF9ED;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    gap: 50px;
+    background-color: #FEF9ED;
+    width: 100%;
+}
+
+.container{
+    background-color: #FFFFFF;
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.6s ease-out;
+    outline: 1px #BD8282 dashed;
+}
+
+h2{
+    text-align: center;
+    font-size: 24px;
+    color: #BD8282;
+    margin-bottom: 20px;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead th{
+    background-color: #BD8282;
+    color: white;
+    padding: 15px;
+    font-weight: 600;
+}
+
+tbody tr{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+tbody tr:hover{
+    transform: scale(1.02);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+tbody td, th{
+    text-align: center;
+    padding: 12px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.ban-btn{
+    background-color: #F44336;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 91px;
+}
+
+.ban-btn:hover{
+    background-color: #c73c3c;
+    transform: scale(1.1);
+    transition: transform 0.4 ease;
+}
+
+.unban-btn{
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.unban-btn:hover{
+    background-color: #7dcd7f;
+    transform: scale(1.1);
+    transition: transform 0.4 ease;
+}
+
+.status{
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.status-active{
+    color: #4CAF50;
+}
+
+.status-banned{
+    color: #F44336;
+}
+
+.username{
+    max-width: 150px; 
+    word-wrap: break-word;
+}
+
+tr:hover {
+    background-color: #F1F1F1;
+    cursor: pointer;
+}
+
+.search-bar {
+    flex: 1;
+    width: 600px;
+    display: flex;
+    gap:5px;
+    border-radius: 999px;
+    
+}
+
+.search-bar:hover{
+    transform: scale(0.98);
+    transition: 0.3s;
+}
+
+.search-bar input{
+    width: 100%;
+    border-radius: 999px; 
+    border: none; 
+    outline: none; 
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 10px;
+    font-size: 12px;
+}
+.search-artwork {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 30px; 
+    border: none;
+    outline: none;
+    padding-right: 40px; 
+}
+
+.search-button {
+    background: none;
+    border: none;
+    display: flex;
+    font-size: 10px;
+}

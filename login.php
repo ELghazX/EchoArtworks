@@ -10,9 +10,13 @@ if (isset($_POST['submit'])) {
     $user = login($conn, $email, $password);
     if ($user) {
         $_SESSION['login'] = true;
+        $_SESSION['role'] = $user['role'];
         $_SESSION['idUser'] = $user['id_user'];
+        if (!$user['role'] == 'admin') {
+            header('Location: index.php');
+        }
+        header('Location: dashboard.php');
 
-        header('Location: index.php');
         exit;
     } else {
         echo "<script>alert('Email atau password salah!');
