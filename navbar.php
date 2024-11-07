@@ -61,16 +61,16 @@
     </div>
     <!-- Hidden Navbar -->
     <div class="hidden-navbar" id="hiddenNavbar">
-        <?php if (isset($_SESSION["idUser"])): ?>
-            <a href="profil.html"><i class='bx bxs-user-circle' style="font-size: 100px; "></i></a>
+        <a href="index.php"><i class='bx bx-home' style="font-size: 45px;"></i><span class="tooltip">Beranda</span></a>
+        <?php if (isset($_SESSION["role"]) && $_SESSION['role'] == "admin"): ?>
+            <a href="dashboard.php"><i class='bx bxs-dashboard' style="font-size: 50px;"></i><span class="tooltip">Dashboard</span></a>
         <?php endif; ?>
-        <?php if (basename($_SERVER['PHP_SELF']) == 'index.php'): ?>
-            <input type="text" name="search" id="search" placeholder="Cari artwork disini" class="search-artwork" style="margin-top: 40px;">
-            <button type="submit" style="background: none; border: none; "></button>
-        <?php endif; ?>
-        <a href="addPost.php"><i class='bx bx-add-to-queue' style="font-size: 46px; "></i></a>
-        <a href="help.php">Help</a>
+        <a href="addPost.php"><i class='bx bx-add-to-queue' style="font-size: 45px;"></i><span class="tooltip">Tambah Post</span></a>
+        <a href="help.php"><i class='bx bx-help-circle'></i><span class="tooltip">Help</span></a>
         <a href="faq.php">FAQ</a>
+        <?php if (isset($_SESSION["idUser"])): ?>
+            <a href="profil.php?idUser=<?= $idUser ?>"><i class='bx bxs-user-circle' style="font-size: 50px;"></i><span class="tooltip">Profil kamu</span></a>
+        <?php endif; ?>
         <a href="javascript:void(0);" class="close" onclick="toggleNavbar()"><i class='bx bx-x' style="font-size: 32px;"></i></a>
     </div>
 </div>

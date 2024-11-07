@@ -113,14 +113,3 @@ function cari($conn, $keyword)
     ";
     return ambilData($conn, $query);
 }
-
-function isUserBanned($conn, $userId)
-{
-    $sql = "SELECT status FROM users WHERE id = $userId";
-    $status = ambilData($conn, $sql);
-    if (count($status) > 0) {
-        return $status[0]['status'] === 'banned';
-    } else {
-        return false;
-    }
-}

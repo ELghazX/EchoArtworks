@@ -26,12 +26,6 @@ $posts = ambilData($conn, $sql);
 <body>
     <?php include('navbar-admin.php') ?>
     <div class="main-container">
-        <div class="search-bar">
-            <input type="text" name="search" id="search" placeholder="Cari  disini" class="search-artwork">
-            <button type="submit" class="search-button">
-                <i class='bx bx-search-alt' style="font-size: 50px; color: black;"></i>
-            </button>
-        </div>
         <div class="container">
             <h2>Semua Artwork</h2>
             <table>
