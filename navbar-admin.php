@@ -16,9 +16,11 @@
 
             <!-- Navbar -->
             <div class="navbar">
+                <a href="index.php"><i class='bx bx-home' style="font-size: 45px;"></i><span class="tooltip">Beranda</span></a>
+                <a href="dashboard.php"><i class='bx bxs-dashboard' style="font-size: 45px;"></i><span class="tooltip">Dashboard</span></a>
                 <a href="accountList.php"><i class='bx bx-user' style="font-size: 45px;"></i><span class="tooltip">Semua User</span></a>
                 <a href="allPost.php"><i class='bx bx-image-add'></i><span class="tooltip">Semua Postingan</span></a>
-                <a href="allPost.php"><i class='bx bx-exit'></i><span class="tooltip">Logout</span></a>
+                <a href="logout.php"><i class='bx bx-exit'></i><span class="tooltip">Logout</span></a>
             </div>
 
             <!-- Hamburger Menu untuk versi mobile -->
@@ -28,8 +30,11 @@
         </div>
         <!-- Hidden Navbar untuk versi mobile -->
         <div class="hidden-navbar" id="hiddenNavbar">
-            <a href="accountList.php">Semua User</a>
-            <a href="allPost.php">Semua Postingan</a>
+            <a href="index.php"><i class='bx bx-home'></i> Beranda</a>
+            <a href="dashboard.php"><i class='bx bxs-dashboard'></i> Dashboard</a>
+            <a href="accountList.php"><i class='bx bx-user'></i> Semua User</a>
+            <a href="allPost.php"><i class='bx bx-image-add'></i> Semua Postingan</a>
+            <a href="logout.php"><i class='bx bx-exit'></i> Logout</a>
             <a href="javascript:void(0);" class="close" onclick="toggleNavbar()"><i class='bx bx-x' style="font-size: 32px;"></i></a>
         </div>
         <script src="script/script.js"></script>

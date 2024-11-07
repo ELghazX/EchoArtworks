@@ -1,3 +1,17 @@
+<?php
+session_start();
+include 'conn.php';
+include 'func.php';
+if (!$_SESSION['role'] == 'admin') {
+    header('Location: index.php');
+    exit;
+}
+$sqlTotalUser = "SELECT count(*) FROM users WHERE role = 'user'";
+$sqlTotalPost = "SELECT count(*) FROM posts";
+$totalUser = ambilData($conn, $sqlTotalUser)[0]['count(*)'];
+$totalPost = ambilData($conn, $sqlTotalPost)[0]['count(*)'];
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +35,7 @@
                 <a href="accountList.php" class="container-user-link">
                     <div class="container-user">
                         <i class='bx bx-user'></i>
-                        <p>20</p>
+                        <p><?= $totalUser ?></p>
                         <p>Total User</p>
                     </div>
                 </a>
@@ -29,7 +43,7 @@
                 <a href="allPost.php" class="container-postingan-link">
                     <div class="container-postingan">
                         <i class='bx bx-image-add'></i>
-                        <p>20</p>
+                        <p><?= $totalPost ?></p>
                         <p>Total ArtWork</p>
                     </div>
                 </a>

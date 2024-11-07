@@ -1,3 +1,17 @@
+<?php
+include 'conn.php';
+include 'func.php';
+session_start();
+if ($_SESSION['role'] != 'admin') {
+    header('Location: index.php');
+    exit;
+}
+$sql = "SELECT posts.*, users.username FROM posts"
+    . " JOIN users ON posts.id_user = users.id_user";
+$posts = ambilData($conn, $sql);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,28 +37,27 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Nomor</th>
-                        <th>Posted By</th>
+                        <th>ID</th>
+                        <th>Dipost oleh</th>
                         <th>Judul</th>
-                        <th>ArtWork</th>
+                        <th>Image</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td class="username">pussasdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddycat</td>
-                        <td class="title">oren</td>
-                        <td><img src="uploads/671f78ffbb39d.jpg" alt="Art 1" class="artwork-image"></td>
-                        <td><button class="delete-btn"><i class='bx bx-trash'></i></button></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td class="username">wibucabul</td>
-                        <td class="title">keindahan alam</td>
-                        <td><img src="uploads/671f7e963abcf.png" alt="Art 2" class="artwork-image"></td>
-                        <td><button class="delete-btn"><i class='bx bx-trash'></i></button></td>
-                    </tr>
+                    <?php foreach ($posts as $post): ?>
+                        <tr>
+                            <td><?= $post['id_post'] ?></td>
+                            <td class="username"><?= $post['username'] ?></td>
+                            <td class="title"><?= $post['caption'] ?></td>
+                            <td><img src="<?= $post['image'] ?>" alt="Art 1" class="artwork-image"></td>
+                            <td><a href="deletePostAdmin.php?idPost=<?= $post['id_post'] ?> " onclick="return confirm('Yakin Hapus?')">
+                                    <button class=" delete-btn"><i class='bx bx-trash'>Hapus</i></button>
+                                </a>
+                            </td>
+                        </tr>
+
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </div>

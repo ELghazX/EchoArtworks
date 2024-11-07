@@ -22,4 +22,7 @@ if (isset($_POST['submit'])) {
             document.location.href='logres.php';</script>";
         }
     }
+} else {
+    header('Location: index.php');
+    exit;
 }

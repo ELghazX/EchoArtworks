@@ -45,16 +45,19 @@ shuffle($posts);
                 </div>
             </div>
         <?php endif; ?>
-        <div class="postingan">
-            <?php foreach ($posts as $post) : ?>
-                <div>
-                    <a href="detail.php?id_post=<?= $post['id_post'] ?>"><img src="<?= $post['image'] ?>" alt=""></a>
-                </div>
-            <?php endforeach; ?>
-        </div>
+        <!-- Postingan -->
+        <?php if (!$posts) : ?>
+            <h1>Belum ada postingan</h1>
+        <?php else : ?>
+            <div class="postingan">
+                <?php foreach ($posts as $post) : ?>
+                    <div>
+                        <a href="detail.php?id_post=<?= $post['id_post'] ?>"><img src="<?= $post['image'] ?>" alt=""></a>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        <?php endif; ?>
     </main>
-
-
 
     <footer>
         <?php include 'footer.php'; ?>

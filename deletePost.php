@@ -21,6 +21,10 @@ if (!isset($idUser)) {
     exit;
 }
 if (isset($idPost)) {
+    $sqlUnlink = "SELECT * FROM posts WHERE id_post = '$idPost' AND id_user = '$idUser'";
+    $unlinkImage = ambilData($conn, $sqlUnlink);
+    unlink($unlinkImage[0]['image']);
+
     $query = "DELETE FROM posts WHERE id_post = $idPost AND id_user = $idUser";
     if ($conn->query($query) === TRUE) {
         echo "<script>

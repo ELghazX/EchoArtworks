@@ -5,7 +5,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
         .search-results {
-            position: absolute;
+            position: fixed;
             top: 100%;
             left: 0;
             width: 100%;
@@ -31,6 +31,7 @@
 <div class="main-container">
     <div class="header">
         <a href="index.php" class="logo"><img src="assets/logo.png" style="height:100px"></a>
+
         <?php if (basename($_SERVER['PHP_SELF']) == 'index.php'): ?>
             <div class="search-bar">
                 <input type="text" name="search" id="search" placeholder="Cari artwork disini" class="search-artwork" onkeyup="searchItems()">
@@ -43,6 +44,10 @@
             </div>
         <?php endif; ?>
         <div class="navbar">
+            <a href="index.php"><i class='bx bx-home' style="font-size: 45px;"></i><span class="tooltip">Beranda</span></a>
+            <?php if (isset($_SESSION["role"]) && $_SESSION['role'] == "admin"): ?>
+                <a href="dashboard.php"><i class='bx bxs-dashboard' style="font-size: 50px;"></i><span class="tooltip">Dashboard</span></a>
+            <?php endif; ?>
             <a href="addPost.php"><i class='bx bx-add-to-queue' style="font-size: 45px;"></i><span class="tooltip">Tambah Post</span></a>
             <a href="help.php"><i class='bx bx-help-circle'></i><span class="tooltip">Help</span></a>
             <a href="faq.php">FAQ</a>

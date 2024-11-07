@@ -12,14 +12,20 @@ if (isset($_POST['submit'])) {
         $_SESSION['login'] = true;
         $_SESSION['role'] = $user['role'];
         $_SESSION['idUser'] = $user['id_user'];
-        if (!$user['role'] == 'admin') {
-            header('Location: index.php');
-        }
-        header('Location: dashboard.php');
 
+        if ($_SESSION['role'] == 'admin') {
+            header('Location: dashboard.php');
+            exit;
+        } else {
+            header('Location: index.php');
+            exit;
+        }
         exit;
     } else {
         echo "<script>alert('Email atau password salah!');
         document.location.href = 'logres.php'</script>";
     }
+} else {
+    header('Location: index.php');
+    exit;
 }
