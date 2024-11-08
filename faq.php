@@ -23,8 +23,8 @@
                     <p class="faq-answer">Untuk mendaftar, buka situs web atau aplikasi echoArtworks, pilih "Daftar", dan masukkan email, kata sandi, serta data lainnya.</p>
                 </div>
                 <div class="faq-item">
-                    <h2 class="faq-question">Bagaimana cara membuat dan mengatur galeri di echoArtworks?</h2>
-                    <p class="faq-answer">Untuk membuat galeri, masuk ke profil Anda, klik "Buat Galeri", beri nama galeri, dan pilih kategori yang sesuai.</p>
+                    <h2 class="faq-question">Bagaimana cara membuat postingan di echoArtworks?</h2>
+                    <p class="faq-answer">Untuk membuat postingan, klik "tombol +" pada bar navigasi, upload gambar, beri judul, dan isi deskripsi yang menarik.</p>
                 </div>
                 <div class="faq-item">
                     <h2 class="faq-question">Apakah echoArtworks berbayar?</h2>

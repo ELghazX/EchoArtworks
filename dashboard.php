@@ -20,6 +20,7 @@ $totalPost = ambilData($conn, $sqlTotalPost)[0]['count(*)'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selamat datang Admin</title>
     <link rel="stylesheet" href="styles/dashboard.css">
+    <!-- <link rel="stylesheet" href="styles/navbar-admin.css"> -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
@@ -50,7 +51,7 @@ $totalPost = ambilData($conn, $sqlTotalPost)[0]['count(*)'];
             </div>
         </div>
     </div>
-    <?php include('footer.php') ?>
+    <?php include 'footer.php' ?>
 </body>
 
 </html>

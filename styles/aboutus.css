@@ -115,7 +115,7 @@ body {
     100% {transform: translateX(0%);}
 }
 
-/* .contact-container {
+.contact-container {
     background-color: #FEF9ED;
     width: 60vw;
     margin: 2rem auto;
@@ -143,4 +143,4 @@ body {
 
 .contact-container a:hover {
     text-decoration: underline;
-} */
+} 

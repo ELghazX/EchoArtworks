@@ -66,6 +66,7 @@ if (isset($_GET['id_post'])) {
                     <div class="keterangan">
                         <h1> <strong><a href="profil.php?idUser=<?= $post['id_user'] ?>">@<?= $post['username'] ?></a></strong></h1>
                         <?php
+                        date_default_timezone_set('Asia/Makassar');
                         $postingTime = strtotime($post['created_at']);
                         $currentTime = time();
                         $timeDifference = $currentTime - $postingTime;

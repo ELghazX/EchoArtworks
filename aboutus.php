@@ -6,39 +6,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us</title>
   <link rel="stylesheet" href="styles/aboutus.css">
+  <link rel="stylesheet" href="styles/contactus.css">
+
 </head>
 
 <body>
+
+  <?php include "navbar.php"; ?>
+
   <div class="container">
     <div class="wrapper">
       <div class="wrapper-holder">
         <div id="wrapper-img-1">
-          <img src="assets/rosa.jpg">
-          <h2>Elly :3</h2>
-          <p class="deskripsi">HALOOOOOOOOOOOOOOOOOOOOOOO
-            BELOBELOBELOBELOBELOBELO <br>
-            UNDER PRESSUREEE SHE SO EXTRAAA<br>
-            NO DEPRESSION IVE BEEN UNDER PRESSURE<br>
-            PUT MY DIAMONDS UNDER PRESSURE<br>
-            WATCH THEM DRIP FOR MEEE<br>
-            TOLD HER THAT I LOVED HER ONCE<br>
-            AND NOW SHED KILL FOR MEEEEEE
+          <img src="assets/ayang.jpg">
+          <h2>Faiz</h2>
+          <p class="deskripsi">
+            Nama: Faizul Anwar Wandi<br>
+            Role: Ketua Kelompok<br>
+            NIM: 2309106024<br>
+            Kelas: A2'23<br>
+            Jenis kelamin: Pria<br>
+            Faizul Anwar wandi merupakan mahasiswa universitas mulawarman<br>
+            yang berperan sebagai mahasiswa dari fakultas teknik, prodi informatika
           </p>
         </div>
         <div id="wrapper-img-2">
           <img src="assets/_3 (1).jpg">
-          <h2>jali :[</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. ,<br>Harum atque quod et perferendis, esse eligendi doloremque odit architecto <br> ab hic quis ipsam sequi quaerat mollitia iusto beatae eos blanditiis non.</p>
+          <h2>Ghazali</h2>
+          <p class="deskripsi">Nama: Muhammad Ghazali<br>
+            Role: Anggota<br>
+            NIM: 2309106041<br>
+            Kelas: A2'23<br>
+            Jenis kelamin: Pria<br>
+            Muhammad Ghazali merupakan mahasiswa universitas mulawarman<br>
+            yang berperan sebagai mahasiswa dari fakultas teknik, prodi informatika</p>
         </div>
         <div id="wrapper-img-3">
           <img src="assets/isolde.jpg">
-          <h2>Wulan :D</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. ,<br>Harum atque quod et perferendis, esse eligendi doloremque odit architecto <br> ab hic quis ipsam sequi quaerat mollitia iusto beatae eos blanditiis non.</p>
+          <h2>Wulan</h2>
+          <p class="deskripsi">
+            Nama: Siti Fauziah Wulandari<br>
+            Role: Anggota<br>
+            NIM: 2309106038<br>
+            Kelas: A2'23<br>
+            Jenis kelamin: Wanita<br>
+            Siti Fauziah Wulandari merupakan mahasiswa universitas mulawarman<br>
+            yang berperan sebagai mahasiswa dari fakultas teknik, prodi informatika
+          </p>
         </div>
         <div id="wrapper-img-4">
-          <img src="assets/ayang.jpg">
-          <h2>ijul :)</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. ,<br>Harum atque quod et perferendis, esse eligendi doloremque odit architecto <br> ab hic quis ipsam sequi quaerat mollitia iusto beatae eos blanditiis non.</p>
+          <img src="assets/rosa.jpg">
+          <h2>Elly</h2>
+          Nama: Nur Juzieatul Alifah<br>
+          Role: Anggota<br>
+          NIM: 2309106040<br>
+          Kelas: A2'23<br>
+          Jenis kelamin: Wanita<br>
+          Nur Juzieatul Alifah merupakan mahasiswa universitas mulawarman<br>
+          yang berperan sebagai mahasiswa dari fakultas teknik, prodi informatika</p>
         </div>
 
       </div>
@@ -49,8 +74,18 @@
       <a href="#slider-img-3" class="button"></a>
       <a href="#slider-img-4" class="button"></a>
     </div>
+
   </div>
 
+  <div class="contact-container">
+    <h2>Contact Us</h2>
+    <p>Ada pertanyaan atau kurang ingpo? kontak kami: </p>
+    <p>Email: <a href="mailto:contact@echoartworks.com">contact@echoartworks.com</a></p>
+    <p>Phone: +62 123 456 789</p>
+    <p>Address: Jalan Mukawarman, Lecture building</p>
+  </div>
+
+  <?php include "footer.php"; ?>
 
 </body>
 

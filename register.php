@@ -7,6 +7,10 @@ if (isset($_POST['submit'])) {
     $password = htmlspecialchars($_POST['password']);
     $password2 = htmlspecialchars($_POST['password2']);
 
+    if (!cekPassword($password)) {
+        echo "<script>alert('Password minimal 6 karakter');
+        document.location.href = 'logres.php';</script>";
+    } else
     if (cekUsername($conn, $username)) {
         echo "<script>alert('Username sudah terdaftar');
         document.location.href = 'logres.php';</script>";

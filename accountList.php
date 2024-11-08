@@ -19,6 +19,8 @@ $users = ambilData($conn, $sql);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daftar Akun Pengguna</title>
     <link rel="stylesheet" href="styles/accountList.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <!-- <link rel="stylesheet" href="styles/navbar-admin.css"> -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 

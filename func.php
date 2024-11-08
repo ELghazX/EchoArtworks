@@ -26,6 +26,14 @@ function  login($conn, $email, $password)
     }
     return false;
 }
+function cekPassword($password)
+{
+    if (strlen($password) < 6) {
+        return false;
+    } else {
+        return true;
+    }
+}
 
 function konfPassword($password, $password2)
 {
@@ -94,14 +102,14 @@ function formatTimeElapsed($seconds)
         'detik' => 1,
     ];
 
-    foreach ($intervals as $name => $duration) {
-        $count = floor($seconds / $duration);
+    foreach ($intervals as $waktu => $durasi) {
+        $count = floor($seconds / $durasi);
         if ($count >= 1) {
-            return $count . ' ' . $name . ($count > 1 ? 's' : '') . ' yang lalu';
+            return $count . ' ' . $waktu .   ' yang lalu';
         }
     }
 
-    return 'just now';
+    return 'Baru Saja';
 }
 function cari($conn, $keyword)
 {

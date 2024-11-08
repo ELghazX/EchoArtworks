@@ -3,7 +3,10 @@ include 'conn.php';
 include 'func.php';
 session_start();
 
-
+if (!isset($_SESSION['login'])) {
+    header('Location: index.php');
+    exit;
+}
 
 $idUser = $_GET['idUser'];
 $sqlAkun = "SELECT * FROM users WHERE id_user = $idUser";
@@ -45,7 +48,7 @@ $posts = ambilData($conn, $sql);
             </div>
         </div>
         <div class="username-container">
-            @<?= htmlspecialchars($akun['username']) ?>
+            <strong><a href="profil.php?idUser=<?= $idUser ?>" style="text-decoration : none; color:black">@<?= htmlspecialchars($akun['username']) ?></a></strong>
         </div>
         <div class="postingan-kamu">
             Postingan
@@ -65,6 +68,9 @@ $posts = ambilData($conn, $sql);
             </div>
         <?php endif; ?>
     </div>
+    <footer>
+        <?php include 'footer.php' ?>
+    </footer>
 </body>
 
 </html>

@@ -122,13 +122,16 @@ shuffle($posts);
     <main>
         <div class="search-mobile" id="search-mobile">
             <?php if (basename($_SERVER['PHP_SELF']) == 'index.php'): ?>
-                <div class="search-bar-mobile">
-                    <input type="text" name="search" id="search" placeholder="Cari artwork disini" class="search-artwork" onkeyup="searchItems()">
-                    <button type="submit" class="search-button">
-                        <i class='bx bx-search-alt' style="font-size: 32px; color: #fff;"></i>
-                    </button>
-                    <div id='search-results' class="search-results"> </div>
-                </div>
+                <form action="searchMobile.php" method="GET">
+                    <div class="search-bar-mobile">
+                        <input type="text" name="keyword" id="search" placeholder="Cari artwork disini" class="search-artwork" onkeyup="searchItems()">
+                        <button type="submit" class="search-button">
+                            <i class='bx bx-search-alt' style="font-size: 32px; color: #fff;"></i>
+                        </button>
+                        <div id='search-results' class="search-results"> </div>
+                    </div>
+                </form>
+                <div class="search-result"></div>
             <?php endif; ?>
         </div>
         <!-- Login/Tidak -->
@@ -158,7 +161,7 @@ shuffle($posts);
     </main>
 
     <footer>
-        <div class="kontener">
+        <!-- <div class="kontener">
             <div class="footer">
                 <div class="menu-footer">
                     <a href="" class="logo-footer"><img src="assets/logo.png" alt="logo"></a>
@@ -175,7 +178,8 @@ shuffle($posts);
                     <p>&copy; 2024 by ECHOARTWORK</p>
                 </div>
             </div>
-        </div>
+        </div> -->
+        <?php include 'footer.php'; ?>
     </footer>
 
 

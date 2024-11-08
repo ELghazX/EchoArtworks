@@ -79,7 +79,7 @@ if (isset($_SESSION['login'])) {
                                 <i class="bx bx-user icon"></i>
                             </div>
                             <div class="input-box">
-                                <input type="password" class="input-field" name="password" id="password" placeholder="Password" required>
+                                <input type="password" class="input-field" name="password" id="password" placeholder="Password minimal 6 karakter" required>
                                 <i class="bx bx-lock-alt icon"></i>
                             </div>
                             <div class="input-box">

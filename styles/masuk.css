@@ -44,7 +44,7 @@ main{
     border-radius: 30px;
     /* backdrop-filter: blur(20px); */
     overflow: hidden;
-    background-color: #7387BD ;
+    background-color: #BD8282;
 }
 
 /* ====== First Column ===== */
@@ -58,7 +58,7 @@ main{
     /* backdrop-filter: blur(30px); */
     border-radius: 0 30% 20% 0;
     transition: border-radius .3s;
-    background-color: #ADB8D6;
+    background-color: #dfacac;
 }
 
 .image-layer{
@@ -115,7 +115,10 @@ main{
 }
 
 .btn-1{
-    background: #ADB8D6;
+    background: #dfacac;
+}
+.btn-2{
+    background: #dfacac;
 }
 
 .btn:hover{
@@ -229,7 +232,7 @@ main{
     padding: 0 15px;
     margin: 10px 0;
     color:#ffff;
-    background:#a6b3da;
+    background:#dfacac;
     border: none;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);

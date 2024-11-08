@@ -17,9 +17,38 @@
         }
 
         .search-results div {
+            display: flex;
+            align-items: center;
             padding: 10px;
             border-bottom: 1px solid #eee;
             cursor: pointer;
+            margin: 0;
+            gap: 10px;
+        }
+
+        .search-results div img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            border-radius: 8px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .container-search {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            margin: 0;
+            width: auto;
+            text-align: left;
+
+        }
+
+        .container-search p {
+            margin: 0;
+            text-align: left;
+            width: 100%;
         }
 
         .search-results div:hover {
@@ -40,7 +69,9 @@
 
                 </button>
 
-                <div id='search-results' class="search-results"> </div>
+                <div id='search-results' class="search-results">
+
+                </div>
             </div>
         <?php endif; ?>
         <div class="navbar">

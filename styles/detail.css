@@ -1,6 +1,6 @@
 /* 
 Warna
- 
+
 FEF9ED  = beige
 BD8282 = Coklat
 BEABD8 = Warna ungu terlalu muda
@@ -38,16 +38,15 @@ a{
     margin-left: 10px;
 }
 
-
 .btn a:hover{
     transform: scale(0.9);
     transition: 0.3s;
 }
+
 .main-container{
     display: flex;
     flex-direction: column;
     position: inherit;
-    
 }
 
 .container-detail{
@@ -61,6 +60,7 @@ a{
     margin-top: 20px;
     margin-bottom: 50px;
 }
+
 .keterangan{
     display: flex;
     flex-direction: column;
@@ -100,6 +100,7 @@ a{
     transform: scale(0.95);
     transition: 0.4s;
 }
+
 .like-button {
     background: none;
     border: none;
@@ -113,6 +114,7 @@ a{
     transform: scale(0.95);
     transition: 0.4s;
 }
+
 .like-icon {
     color: #555; 
 }
@@ -133,6 +135,7 @@ textarea{
     border-radius: 20px;
     padding: 20px;
 }
+
 .userComment{
     display: flex;
     flex-direction: column;
@@ -162,6 +165,7 @@ textarea{
     background-color: #ffff;
     width: 75%;
     padding: 20px;
+    border-radius: 15px;
 }
 
 .download-btn{
@@ -170,13 +174,11 @@ textarea{
     width: max-content;
     border-radius: 20px;
     padding: 6px;
-
 }
 
 .download-btn:hover{
     transform: scale(0.95);
     transition: 0.5s;
-
 }
 
 .edit-hapus{
@@ -194,7 +196,6 @@ textarea{
     border-radius: 10px;
     padding: 6px;
     text-align: center;
-    
 }
 
 a.edit-btn:hover{
@@ -207,4 +208,93 @@ a.delete-btn:hover{
     transform: scale(0.92);
     transition: 0.5s;
     background-color: #d13f3f;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .container-detail {
+        width: 85%;
+    }
+
+    .container-post {
+        width: 60%;
+    }
+
+    .container-post img {
+        width: 85%;
+    }
+
+    textarea {
+        width: 60%;
+    }
+
+    .kolom-komentar {
+        width: 85%;
+    }
+}
+
+@media (max-width: 992px) {
+    .container-detail {
+        width: 90%;
+    }
+
+    .container-post {
+        width: 70%;
+    }
+
+    .container-post img {
+        width: 90%;
+    }
+
+    textarea {
+        width: 70%;
+    }
+
+    .kolom-komentar {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-detail {
+        width: 95%;
+    }
+
+    .container-post {
+        width: 80%;
+    }
+
+    .container-post img {
+        width: 95%;
+    }
+
+    textarea {
+        width: 60%;
+    }
+
+    .kolom-komentar {
+        width: 95%;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-detail {
+        width: 100%;
+    }
+
+    .container-post {
+        width: 100%;
+    }
+
+    .container-post img {
+        width: 100%;
+    }
+
+    textarea {
+        width: 60%;
+    }
+
+    .kolom-komentar {
+        width: 80%;
+    }
 }
