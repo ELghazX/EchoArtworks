@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 07, 2024 at 07:36 AM
+-- Generation Time: Nov 08, 2024 at 05:07 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `echoartwork`
 --
-CREATE DATABASE IF NOT EXISTS `echoartwork` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `echoartwork`;
 
 -- --------------------------------------------------------
 
@@ -86,8 +84,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `username`, `email`, `password`, `role`, `created_at`) VALUES
-(12, 'admin', 'admin@gmail.com', '$2y$10$3eCyBEqm1sMjJIoTL7nsaeqz4yUpFGyy2Zijr46xKGzek6FVtUE6a', 'admin', '2024-11-06 17:09:07'),
-(13, 'elghaz', 'ghazali.classroom@gmail.com', '$2y$10$Xo0I4K.zwDOdTb0zFoz5BeF.6HRqGsLWsuGKSYiOfW6jpUTwUlJ82', 'user', '2024-11-07 04:36:56');
+(12, 'admin', 'admin@gmail.com', '$2y$10$3eCyBEqm1sMjJIoTL7nsaeqz4yUpFGyy2Zijr46xKGzek6FVtUE6a', 'admin', '2024-11-06 17:09:07');
 
 --
 -- Indexes for dumped tables
@@ -130,25 +127,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id_comment` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_comment` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `likes`
 --
 ALTER TABLE `likes`
-  MODIFY `id_like` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_like` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id_post` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id_post` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- Constraints for dumped tables
