@@ -69,7 +69,7 @@ if (isset($_POST['submit'])) {
     </header>
     <main>
         <div class="main-container">
-            <div class="header">
+            <div class="header-post">
                 <p style="font-size: 32px;">Tambah Postingan</p>
             </div>
             <form action="" method="post" enctype="multipart/form-data" onsubmit="return confirm('Yakin ingin posting?');">

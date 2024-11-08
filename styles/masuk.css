@@ -20,7 +20,7 @@ BEABD8
 }
 
 /* ====== Body ===== */
-body{
+main{
     background: url("../img/1.jpg");
     background-position: center;
     background-size: cover;

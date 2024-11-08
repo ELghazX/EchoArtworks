@@ -114,3 +114,33 @@ body {
     90% {transform: translateX(0%);}
     100% {transform: translateX(0%);}
 }
+
+/* .contact-container {
+    background-color: #FEF9ED;
+    width: 60vw;
+    margin: 2rem auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-container h2 {
+    color: #7387BD;
+    margin-bottom: 10px;
+}
+
+.contact-container p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+.contact-container a {
+    color: #8AAEDA;
+    text-decoration: none;
+}
+
+.contact-container a:hover {
+    text-decoration: underline;
+} */
