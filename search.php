@@ -24,7 +24,7 @@ if (isset($_GET['keyword'])) {
             </div>
         <?php endforeach; ?>
     <?php else: ?>
-        echo "<h1>Post tidak ditemukan</h1>";
+        <h1>Post tidak ditemukan</h1>
     <?php endif; ?>
 
 <?php
